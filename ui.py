@@ -1,4 +1,4 @@
-# ch 6.3.1 ui.py
+# ch 6.3.3 ui.py
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, 
                              QMessageBox, QPlainTextEdit, QHBoxLayout, QLineEdit, 
                              QComboBox)
@@ -52,8 +52,8 @@ class View(QWidget):
         self.resize(256, 256)
         self.show()
         
-    def setDisplay(self): # 메서드 이름 변경(setMessage -> setDisplay)
-        self.te1.appendPlainText("Button clicked!")
+    def setDisplay(self, text): # 함수명 변경(activateMessage -> setDisplay)
+        self.te1.appendPlainText(text)
         
     def clearMessage(self):
         self.te1.clear()
