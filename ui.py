@@ -1,17 +1,14 @@
-# ch 5.4.1 ui.py
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout, QLabel)
+# ch 5.2.1 ui.py
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, QMessageBox, QPlainTextEdit, QHBoxLayout)
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QDate, Qt # 날짜와 주요 속성값 사용을 위해 추가가
 
 class View(QWidget):
     
     def __init__(self):
         super().__init__()
-        self.date = QDate.currentDate() # 현재 날짜를 저장하기 위해 추가가
         self.initUI()
         
     def initUI(self):
-        self.lbl1 = QLabel(self.date.toString(Qt.DefaultLocaleLongDate), self) # 추가
         self.te1 = QPlainTextEdit()
         self.te1.setReadOnly(True)
         
@@ -26,7 +23,6 @@ class View(QWidget):
         vbox = QVBoxLayout()
         vbox.addWidget(self.te1)
         vbox.addLayout(hbox)
-        vbox.addWidget(self.lbl1)
         vbox.addStretch(1)
         
         self.setLayout(vbox)
