@@ -1,9 +1,9 @@
-# ch 6.3.3 ui.py
+# ch 6.6.1 ui.py
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QVBoxLayout, 
                              QMessageBox, QPlainTextEdit, QHBoxLayout, QLineEdit, 
                              QComboBox)
 from PyQt5.QtGui import QIcon
-from PyQt5 import QtCore # 모듈 추가가
+from PyQt5 import QtCore # 모듈 추가
 
 class View(QWidget):
     
@@ -21,13 +21,13 @@ class View(QWidget):
         self.le1=QLineEdit('0',self) # 라인 에디트1 추가
         self.le1.setAlignment(QtCore.Qt.AlignRight) # 라인 에디트1 문자열 배치 설정
         self.le1.setFocus(True) # 포커스 설정
-        self.le1.selectAll() # 텍스트 전체 선택택
+        self.le1.selectAll() # 텍스트 전체 선택
         
         self.le2=QLineEdit('0',self) # 라인 에디트2 추가
         self.le2.setAlignment(QtCore.Qt.AlignRight) # 라인 에디트2 문자열 배치 설정
         
         self.cb = QComboBox(self) # 콤보 박스 추가
-        self.cb.addItems(['+', '-', '*', '/']) # 콤보 박스 항목 추가(연산자로 사용)
+        self.cb.addItems(['+', '-', '*', '/', '^']) # 거듭제곱 연산자 추가
         
         hbox_formular = QHBoxLayout() # 새로 정의한 위벳을 QHBoxLayout에 위치
         hbox_formular.addWidget(self.le1)
@@ -41,7 +41,7 @@ class View(QWidget):
         
         vbox = QVBoxLayout()
         vbox.addWidget(self.te1)
-        vbox.addLayout(hbox_formular) # hbox_formular 배치치
+        vbox.addLayout(hbox_formular) # hbox_formular 배치
         vbox.addLayout(hbox)
         vbox.addStretch(1)
         
