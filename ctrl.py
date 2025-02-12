@@ -1,4 +1,4 @@
-# ch 6.6.7 ctrl.py
+# ch 7.1.3 ctrl.py
 class Control:
     
     def __init__(self, view):
@@ -21,4 +21,16 @@ class Control:
         self.view.btn2.clicked.connect(self.view.clearMessage)
     
     def sum(self, a, b): # 예외 처리 제거: 향후 calculate 하무에서 처리하도록 구현 예정정
-            return a+b
+        return a+b
+    
+    def sub(self, a, b): # 뺄셈 함수 추가
+        return a-b
+    
+    def mul(self, a, b): # 곱셈 함수 추가
+        return a*b
+    
+    def div(self, a, b): # 나눗셈 함수 추가
+        return a/b
+    
+    def pow(self, a, b): # 거듭제곱 함수 추가
+        return pow(a, b)
