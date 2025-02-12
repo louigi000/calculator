@@ -19,10 +19,6 @@ class Control:
                 return f'{num1} * {num2} = {self.mul(num1, num2)}'
             elif operator == '/':
                 return f'{num1} / {num2} = {self.div(num1, num2)}'
-            elif operator == '^':
-                return f'{num1} ^ {num2} = {self.pow(num1, num2)}'
-            elif operator == '%': # '%'를 입력했을 때 mod 연산 결과를 출력하도록 추가가
-                return f'{num1} % {num2} = {self.mod(num1, num2)}'
             else:
                 return "Calculation Error" # 연산자가 아니면 에러 메시지를 리턴
             
