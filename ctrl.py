@@ -29,8 +29,11 @@ class Control:
     def mul(self, a, b): # 곱셈 함수 추가
         return a*b
     
-    def div(self, a, b): # 나눗셈 함수 추가
-        return a/b
+    def div(self, a, b): # div 함수 수정
+        if (b == 0):
+            return 0
+        else:
+            return a/b
     
     def pow(self, a, b): # 거듭제곱 함수 추가
         return pow(a, b)
