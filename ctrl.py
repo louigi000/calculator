@@ -36,6 +36,9 @@ class Control:
         except Exception as e:
             return e
         return a/b
-
-    def pow(self, a, b): # 거듭제곱 함수 추가
-        return pow(a, b)
+    
+    def pow(self, a, b): # 제곱 함수 수정
+        if (a==0):
+            return 0
+        else:
+            return pow(a, b)
